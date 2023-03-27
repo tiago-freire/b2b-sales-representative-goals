@@ -1,6 +1,0 @@
-curl --request get \
-	--url 'https://bravtexfashionb2b.vtexcommercestable.com.br/api/dataentities/quotes/search?_fields=id%2CcreatorEmail%2CcreationDate%2Corganization%2CcostCenter%2Cstatus%2Csubtotal%2CupdateHistory&_where=createdIn%20between%202023-03-01%20AND%202023-03-31&_schema=v1.3&_sort=creationDate%20DESC' \
-	--header 'Accept: application/json' \
-	--header 'Content-Type: application/json' \
-	--header 'X-VTEX-API-AppKey: vtexappkey-bravtexfashionb2b-RVHYGU' \
-	--header 'X-VTEX-API-AppToken: TRRRPHEHFQVFUFJAJZDEBTGKTIVWJEYXHNOUOIQICCMFWWGZWWJPONXNETBAVWAUBJZZWDOIHYFGBJXNXXXTIZMJKBCCNULOXQFRCGCBCMKHTPHUMSMUYSSAAXHZJUUM'
