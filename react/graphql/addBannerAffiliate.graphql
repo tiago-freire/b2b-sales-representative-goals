@@ -1,0 +1,18 @@
+mutation addBannerAffiliate(
+  $affiliateId: ID!
+  $affiliateSlug: String!
+  $banner: String!
+) {
+  addBannerAffiliate(
+    newBannerAffiliate: {
+      affiliateId: $affiliateId
+      affiliateSlug: $affiliateSlug
+      banner: $banner
+    }
+  ) {
+    id
+    affiliateId
+    affiliateSlug
+    banner
+  }
+}

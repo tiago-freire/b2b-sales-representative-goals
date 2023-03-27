@@ -1,0 +1,181 @@
+{
+  "name": "b2b-sales-representative-quotes",
+  "vendor": "ssesandbox04",
+  "version": "0.0.0",
+  "title": "B2B Sales Representative Quotes",
+  "description": "Provide monthly queries on B2B quotes for sales representatives",
+  "categories": [],
+  "dependencies": {
+    "vtex.storefront-permissions": "1.x",
+    "vtex.orders-broadcast": "0.x"
+  },
+  "builders": {
+    "node": "6.x"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "graphql-query"
+    },
+    {
+      "name": "vbase-read-write"
+    },
+    {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "ListOrders"
+    },
+    {
+      "name": "read-workspace-apps"
+    },
+    {
+      "name": "read-write-apps-settings"
+    },
+    {
+      "name": "update-app-settings"
+    },
+    {
+      "name": "SaveOrderFormConfiguration"
+    },
+    {
+      "name": "POWER_USER_DS"
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "vtex.storefront-permissions:resolve-graphql"
+    },
+    {
+      "name": "Get_User_By_Identifier"
+    },
+    {
+      "name": "template-criar"
+    },
+    {
+      "name": "template-editar"
+    },
+    {
+      "name": "send-message"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "sheets.googleapis.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/checkout/pub/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "/api/dataentities/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/checkout/pvt/configuration/orderForm"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/oms/pvt/admin/orders/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/scheduler/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/scheduler/master/vtex.gmc-keep-alive"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/api/dataentities/cart/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "kubernetes.default.svc.cluster.local",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "*",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{workspace}}--{{account}}.myvtex.com",
+        "path": "/b2b-quotes-graphql/_v/*"
+      }
+    }
+  ],
+  "settingsSchema": {
+    "title": "Google Sheets API Settings",
+    "type": "object",
+    "properties": {
+      "service_account_credentials_json": {
+        "title": "Google API Service Account Credentials JSON",
+        "type": "string"
+      },
+      "google_sheet_id": {
+        "title": "Google Sheet ID",
+        "type": "string"
+      },
+      "tab_title": {
+        "title": "Tab Title",
+        "type": "string"
+      }
+    }
+  },
+  "billingOptions": {
+    "type": "free",
+    "availableCountries": [
+      "*"
+    ],
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

@@ -1,0 +1,20 @@
+mutation updateBannerAffiliate(
+  $id: ID!
+  $affiliateId: ID
+  $affiliateSlug: String
+  $banner: String
+) {
+  updateBannerAffiliate(
+    updateBannerAffiliate: {
+      id: $id
+      affiliateId: $affiliateId
+      affiliateSlug: $affiliateSlug
+      banner: $banner
+    }
+  ) {
+    id
+    affiliateId
+    affiliateSlug
+    banner
+  }
+}

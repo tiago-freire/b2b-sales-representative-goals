@@ -1,0 +1,3 @@
+mutation deleteBannerAffiliate($id: ID!) {
+  deleteBannerAffiliate(id: $id)
+}

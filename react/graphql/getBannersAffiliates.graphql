@@ -1,0 +1,8 @@
+query getBannersAffiliates {
+  getBannersAffiliatesScroll(sorting: { field: affiliateSlug, order: ASC }) {
+    id
+    affiliateId
+    affiliateSlug
+    banner
+  }
+}

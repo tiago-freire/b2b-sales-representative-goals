@@ -1,0 +1,30 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 2,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "routes": {
+    "salesRepresentativeGoal": {
+      "path": "/_v/b2b-sales-representative-quotes/goal/:organizationId",
+      "public": true,
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["get"]
+        }
+      ]
+    },
+    "keep-alive": {
+      "path": "/_v/b2b-sales-representative-quotes/keep-alive",
+      "public": true,
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": ["get"]
+        }
+      ]
+    }
+  }
+}

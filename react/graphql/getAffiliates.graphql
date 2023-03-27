@@ -1,0 +1,33 @@
+query getAffiliates(
+  $page: Int!
+  $pageSize: Int!
+  $filter: AffiliatesFilterInput
+  $sorting: AffliatesSortingInput
+) {
+  getAffiliates(
+    page: $page
+    pageSize: $pageSize
+    filter: $filter
+    sorting: $sorting
+  ) @context(provider: "vtex.affiliates") {
+    data {
+      id
+      name
+      slug
+      email
+    }
+    pagination {
+      page
+      pageSize
+      total
+    }
+  }
+}
+
+# query getAffiliates {
+#   getAffiliatesScroll @context(provider: "vtex.affiliates") {
+#     id
+#     name
+#     email
+#   }
+# }

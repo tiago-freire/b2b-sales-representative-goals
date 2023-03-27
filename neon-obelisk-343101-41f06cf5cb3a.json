@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "neon-obelisk-343101",
+  "private_key_id": "41f06cf5cb3a58ce0f15378ccad4399208782bb2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDhtm5hCmTSyUTb\nJGkIfT3/4BVofxUFK47aBT0orb8TP5gqvyWzh/RECXMa5uK3HU5DqyQ9e4VYHaCd\ncPO60Ufdz9uIAFasLWf2G7PjcIb9mwSjVoC92PwTeiUwOettjKALjZ5s7GpmCl1N\n8xbmkmKEmaML5cW58j6mhHHwaEKE8tM0fCg5hFY+Aifm1qgFQ6LCB9YBW9lJtB4B\nXcKl5k/ytZaB+zxn+F4Py+Wa1M65/+F4Sj5j8kq1PoH7TnKra4Ftz//uX5IikBGX\n5FDZWwb3taNL2nPdDZeatwJkbhGCfTrK8timFD3uziEspzYkUEpBPvLF48jhi64c\nef9uMLXbAgMBAAECggEACEhukocUHhwet8AFTrdx4AL0JiqLte3cRynsDaMaoPUz\ne1YaZxU1JI4IOFOCvF+J8LfGE6+FvC8SJtTvTMrDTWOEVeBVTeo4p3Jqzozhl0rq\nB6hz/wOIdJqF5NgrSJDhiqr+xlaCrQ3yUJr8GygCD4Wn0xbyg5ldLTUtDTp2PnSt\nIN9Hy94ZNPtWXmt3zabkWnPWTqGeCq0juyQycRfWAX8Y7KrjVtejtwNZk3OjTHW1\nbvbPU+FKW0LXMFRsSyb4l5l3n7xAJozstH1LOXxZ6PtCJxKCuHP3Xea/NCVKf94B\nqsYovDp7FH9h8I0A0ccXfB3NQ8URnGgHOU0EM3c+MQKBgQDyFpP9JCLd5oA0ywp4\nvVD38zaTpgSgM1r6n3PPpk5BgOsHV3rNJSCr6JzBTJjz0YuhkjnMUNST8A+XuSDU\nk76plLORezlax6H0EQKg+9pk4BqV1JqPU23Vs7npmQU//uzRfRLTKqCpk3+R/jM/\nXvGH5R0aHs2amvFSt5Dy/Cm0cwKBgQDurvKimvr0qTMJYaSQPVX60VoRBd+dHT9x\nDq59qk1SUiqHGeqPOSiI47DxIHCSaJzsRI+4//8jmswWGH48hxhF9TTIlkoZraE8\nI5GQfMoJu/BM+mzw45p0UWvlEuNEkGPcSb4C4uSXVuS03rtZXL6IHMRY26KKg1Ch\nSyAG9ySG+QKBgCEFGVxe0G6p4PTSePQtBl07jEcpTto3BwLGOvqouWXP2r7enL5c\ngQ9RpAftlbMz8rKwCjgnEke3Z7kPJD46hLgGs1N1lkYekqWCqHQixhAaTSYAoLBJ\n9eI/KG2HVKL893o/cBDjcJSQrMbSAFV1csZRZt3IM80RszbQGPI7mMinAoGBAKiQ\njXMhGNLpG84oU1w6tRop9/3FtCL1oPRrdffx6iGVPcukFe+IYoQqqa/hRR9hGlIS\nKZ5xzPKMRE3mhmCg2BewENMIsNRpt1ENnaP5PYaaYB89TOrjExXK2vQw3qhxgNT2\nj2bibqYjC+pg0tdNlJH0HwbSNny0OKFwuPGyYO2hAoGBAOhi6bXZ4Uyw2hMCg69P\nc2Jlpyzj2BpN299W60cFm4ICcs5Dr2rBWEigZ0Mskn511gWDWE3i01cA9SAr2YZP\noy3heJM+Qgv+eljqSc5B9tBEt+ichjN7y2caPdcdvNg79w29Vj0Znpoe/uFpGPXu\nxfGhY84F7WzAXIKGWzavIkXP\n-----END PRIVATE KEY-----\n",
+  "client_email": "b2b-sales-representative@neon-obelisk-343101.iam.gserviceaccount.com",
+  "client_id": "109817284909780171086",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/b2b-sales-representative%40neon-obelisk-343101.iam.gserviceaccount.com"
+}

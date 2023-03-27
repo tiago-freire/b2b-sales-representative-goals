@@ -1,0 +1,6 @@
+{
+  "admin.app.affiliates.banner": {
+    "component": "AffiliatesBannersPage",
+    "path": "/admin/app/affiliates-banners"
+  }
+}

@@ -1,0 +1,5 @@
+query getBannerAffiliateBySlug($slug: String!) {
+  getBannerAffiliateBySlug(slug: $slug) {
+    banner
+  }
+}
