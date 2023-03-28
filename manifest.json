@@ -1,7 +1,7 @@
 {
   "name": "b2b-sales-representative-quotes",
   "vendor": "ssesandbox04",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "title": "B2B Sales Representative Goals",
   "description": "Provide monthly queries on B2B goals for sales representatives",
   "categories": [],
@@ -178,7 +178,9 @@
   },
   "billingOptions": {
     "type": "free",
-    "availableCountries": ["*"],
+    "availableCountries": [
+      "*"
+    ],
     "support": {
       "url": "https://support.vtex.com/hc/requests"
     }
