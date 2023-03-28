@@ -5,6 +5,9 @@
   "title": "B2B Sales Representative Goals",
   "description": "Provide monthly queries on B2B goals for sales representatives",
   "categories": [],
+  "scripts": {
+    "postreleasy": "vtex publish --verbose"
+  },
   "dependencies": {
     "vtex.storefront-permissions": "1.x",
     "vtex.orders-broadcast": "0.x"
