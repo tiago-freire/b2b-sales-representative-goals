@@ -6,7 +6,7 @@ import { fetchSalesRepresentativeGoal } from './handlers/fetchSalesRepresentativ
 import { formatResponse } from './handlers/formatResponse'
 import { validateOrganizationId } from './handlers/validateOrganizationId'
 
-const TIMEOUT_MS = 800
+const TIMEOUT_MS = 3000
 const memoryCache = new LRUCache<string, never>({ max: 5000 })
 
 const clients: ClientsConfig<Clients> = {

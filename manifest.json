@@ -79,7 +79,7 @@
       "name": "outbound-access",
       "attrs": {
         "host": "googleapis.com",
-        "path": "*"
+        "path": "/oauth2/v4/token"
       }
     },
     {

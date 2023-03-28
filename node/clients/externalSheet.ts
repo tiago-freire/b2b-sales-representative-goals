@@ -52,7 +52,9 @@ export default class ExternalSheet
     try {
       spreadsheet = await this.getSpreadsheet(apiCredentials, googleSheetId)
     } catch (e) {
-      errorMessage = `getSpreadsheet error: ${e.message}`
+      errorMessage = `getSpreadsheet error: ${
+        e.message
+      } | Google sheets params: ${JSON.stringify(googleSheetsParams)}`
     }
 
     let sheet: GoogleSpreadsheetWorksheet | undefined
