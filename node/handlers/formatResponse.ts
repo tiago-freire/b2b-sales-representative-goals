@@ -8,9 +8,12 @@ export async function formatResponse(ctx: Context) {
   const sheetResponse = state.sheetClientResponse as ExternalSheetClientResponse
 
   const response: Goal = {
-    message: sheetResponse.errorMessage
-      ? 'Error fetching goal'
-      : 'Goal retrieved successfully from a Google Sheet',
+    ...(sheetResponse.errorMessage
+      ? {
+          success: false,
+          error: `Error fetching goal: ${sheetResponse.errorMessage}`,
+        }
+      : { success: true }),
     organizationId: sheetResponse.organizationId,
     goal: sheetResponse.goal,
   }

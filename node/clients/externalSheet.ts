@@ -8,6 +8,7 @@ import type {
   GoogleSheetsParams,
   SalesRepresentativeGoalInput,
 } from '../typings/organizations'
+import { convertStringCurrencyToNumber } from '../util/util'
 
 export interface ExternalSheetClient {
   getGoal: (
@@ -51,11 +52,6 @@ export default class ExternalSheet
     try {
       spreadsheet = await this.getSpreadsheet(apiCredentials, googleSheetId)
     } catch (e) {
-      this.context.logger.error({
-        message: 'Sheets_API_Error',
-        e,
-      })
-
       errorMessage = e.message
     }
 
@@ -73,9 +69,13 @@ export default class ExternalSheet
       (row) => row.organizationId === input.organizationId
     )
 
+    const goal = selectedRow?.goal
+      ? convertStringCurrencyToNumber(selectedRow?.goal)
+      : undefined
+
     return {
       errorMessage,
-      goal: selectedRow?.goal,
+      goal,
       organizationId: input.organizationId,
     }
   }

@@ -2,7 +2,7 @@ import type { Maybe } from '@vtex/api'
 
 export type ExternalSheetClientResponse = {
   organizationId: string
-  goal: number
+  goal?: number
   errorMessage?: string
   expirationCache?: number
 }
@@ -12,7 +12,8 @@ export type SalesRepresentativeGoalInput = {
 }
 
 export type Goal = {
-  message: string
+  error?: string
+  success?: boolean
   organizationId: string
   goal: Maybe<number>
 }

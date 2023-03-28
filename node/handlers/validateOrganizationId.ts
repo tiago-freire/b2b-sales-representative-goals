@@ -1,5 +1,3 @@
-import { UserInputError } from '@vtex/api'
-
 export async function validateOrganizationId(ctx: Context, next: Next) {
   const {
     vtex: {
@@ -9,11 +7,13 @@ export async function validateOrganizationId(ctx: Context, next: Next) {
 
   const { organizationId } = params
 
+  let errorMessage: string | undefined
+
   if (!organizationId) {
-    throw new UserInputError('organizationId is required')
+    errorMessage = 'organizationId is required'
   }
 
-  ctx.body = { organizationId }
+  ctx.body = { errorMessage, organizationId }
 
   await next()
 }

@@ -2,8 +2,8 @@
   "name": "b2b-sales-representative-quotes",
   "vendor": "ssesandbox04",
   "version": "0.0.0",
-  "title": "B2B Sales Representative Quotes",
-  "description": "Provide monthly queries on B2B quotes for sales representatives",
+  "title": "B2B Sales Representative Goals",
+  "description": "Provide monthly queries on B2B goals for sales representatives",
   "categories": [],
   "dependencies": {
     "vtex.storefront-permissions": "1.x",
@@ -156,23 +156,29 @@
     "properties": {
       "service_account_credentials_json": {
         "title": "Google API Service Account Credentials JSON",
-        "type": "string"
+        "type": "string",
+        "description": "Paste entire Google API Service Account Credentials JSON"
       },
       "google_sheet_id": {
         "title": "Google Sheet ID",
-        "type": "string"
+        "type": "string",
+        "description": "https://docs.google.com/spreadsheets/d/{{ Google Sheet ID }}/edit"
       },
       "tab_title": {
-        "title": "Tab Title",
+        "title": "Tab Title (optional)",
+        "type": "string",
+        "description": "The worksheet tab where the data will be fetched."
+      },
+      "default_goal": {
+        "title": "Default value when a goal is not found in sheet (optional)",
+        "description": "Insert the desired numerical value, using a dot (.) or comma (,) as decimal separator. For values greater than 1000, you can use the thousands separator (dot or comma). Examples of valid formats for one thousand and fifty cents of your currency: 1000,50, 1000,5, 1000.50, 1000.5, 1,000.50, 1,000.5.",
         "type": "string"
       }
     }
   },
   "billingOptions": {
     "type": "free",
-    "availableCountries": [
-      "*"
-    ],
+    "availableCountries": ["*"],
     "support": {
       "url": "https://support.vtex.com/hc/requests"
     }
