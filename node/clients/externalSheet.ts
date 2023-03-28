@@ -52,7 +52,7 @@ export default class ExternalSheet
     try {
       spreadsheet = await this.getSpreadsheet(apiCredentials, googleSheetId)
     } catch (e) {
-      errorMessage = e.message
+      errorMessage = `getSpreadsheet error: ${e.message}`
     }
 
     let sheet: GoogleSpreadsheetWorksheet | undefined
@@ -70,7 +70,7 @@ export default class ExternalSheet
     )
 
     const goal = selectedRow?.goal
-      ? convertStringCurrencyToNumber(selectedRow?.goal)
+      ? convertStringCurrencyToNumber(selectedRow?.goal ?? '0')
       : undefined
 
     return {
