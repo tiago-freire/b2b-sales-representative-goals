@@ -18,7 +18,14 @@ export async function formatResponse(ctx: Context) {
     goal: sheetResponse.goal,
   }
 
+  /* configure context to receive requests from any host */
+  ctx.set('Access-Control-Allow-Origin', '*')
+  ctx.set('Access-Control-Allow-Headers', '*')
+  ctx.set('Access-Control-Allow-Credentials', 'true')
+  ctx.set('Access-Control-Allow-Methods', 'GET, OPTIONS')
+  ctx.set('Access-Control-Max-Age', '86400')
   ctx.set('Cache-Control', 'no-cache')
-  ctx.body = response
+  ctx.set('Content-Type', 'application/json')
   ctx.status = 200
+  ctx.body = response
 }

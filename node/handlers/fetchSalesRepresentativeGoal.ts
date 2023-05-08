@@ -15,7 +15,7 @@ export async function fetchSalesRepresentativeGoal(ctx: Context, next: Next) {
   const googleSheetId = appSettings?.google_sheet_id as string
   const tabTitle = appSettings?.tab_title as string
   const defaultGoal = convertStringCurrencyToNumber(
-    appSettings?.default_goal as string
+    (appSettings?.default_goal as string) ?? '0'
   )
 
   const apiCredentials: Record<string, string> = JSON.parse(

@@ -32,6 +32,11 @@ export default new Service({
   clients,
   routes: {
     salesRepresentativeGoal: method({
+      OPTIONS: [
+        validateOrganizationId,
+        fetchSalesRepresentativeGoal,
+        formatResponse,
+      ],
       GET: [
         validateOrganizationId,
         fetchSalesRepresentativeGoal,

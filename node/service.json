@@ -12,7 +12,7 @@
       "policies": [
         {
           "effect": "allow",
-          "actions": ["get"]
+          "actions": ["get", "options"]
         }
       ]
     },
