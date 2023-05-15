@@ -2,6 +2,8 @@ import { salesRepresentativeGoalStore } from '../store/salesRepresentativeGoalSt
 import type { ExternalSheetClientResponse } from '../typings/organizations'
 import { convertStringCurrencyToNumber } from '../util/util'
 
+const EXPIRATION_CACHE_TIMEOUT_MS = 1000
+
 export async function fetchSalesRepresentativeGoal(ctx: Context, next: Next) {
   const {
     clients: { externalSheet, apps },
@@ -43,7 +45,8 @@ export async function fetchSalesRepresentativeGoal(ctx: Context, next: Next) {
     if (sheetResponse) {
       if (!sheetResponse.errorMessage) {
         if (cacheGoalFromStoreExpired) {
-          sheetResponse.expirationCache = Date.now() + 1000
+          sheetResponse.expirationCache =
+            Date.now() + EXPIRATION_CACHE_TIMEOUT_MS
           salesRepresentativeGoalStore[body.organizationId] = sheetResponse
         }
       } else {
@@ -51,7 +54,7 @@ export async function fetchSalesRepresentativeGoal(ctx: Context, next: Next) {
       }
     }
   } else {
-    errorMessage = 'Credentials not provided on app configuration'
+    errorMessage = 'Credentials not provided on app settings'
   }
 
   if (!sheetResponse?.goal && !errorMessage) {
