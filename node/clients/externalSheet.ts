@@ -22,7 +22,17 @@ export default class ExternalSheet
   implements ExternalSheetClient
 {
   constructor(context: IOContext, options?: InstanceOptions) {
-    super('', context, options)
+    super('https://sheets.googleapis.com/v4/spreadsheets', context, {
+      ...options,
+      headers: {
+        ...options?.headers,
+        // Accept: 'application/vnd.vtex.pricing.v3+json',
+        'Cache-Control': 'no-cache',
+        'Content-Type': 'application/json',
+        'X-Vtex-Use-Https': 'true',
+        VtexIdclientAutcookie: context.authToken ?? '',
+      },
+    })
   }
 
   private async getSpreadsheet(

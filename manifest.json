@@ -72,6 +72,13 @@
       "name": "outbound-access",
       "attrs": {
         "host": "sheets.googleapis.com",
+        "path": "/v4/spreadsheets/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "sheets.googleapis.com",
         "path": "*"
       }
     },
@@ -80,6 +87,41 @@
       "attrs": {
         "host": "googleapis.com",
         "path": "/oauth2/v4/token"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "googleapis.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "accounts.google.com",
+        "path": "/o/oauth2/auth"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "accounts.google.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "oauth2.googleapis.com",
+        "path": "/token"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "oauth2.googleapis.com",
+        "path": "*"
       }
     },
     {

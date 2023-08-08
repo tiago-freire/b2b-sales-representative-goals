@@ -1,6 +1,6 @@
 import type {
-  Goal,
   ExternalSheetClientResponse,
+  Goal,
 } from '../typings/organizations'
 
 export async function formatResponse(ctx: Context) {
@@ -18,14 +18,15 @@ export async function formatResponse(ctx: Context) {
     goal: sheetResponse.goal,
   }
 
-  /* configure context to receive requests from any host */
   ctx.set('Access-Control-Allow-Origin', '*')
   ctx.set('Access-Control-Allow-Headers', '*')
+  ctx.set('Access-Control-Allow-Methods', '*')
   ctx.set('Access-Control-Allow-Credentials', 'true')
-  ctx.set('Access-Control-Allow-Methods', 'GET, OPTIONS')
-  ctx.set('Access-Control-Max-Age', '86400')
-  ctx.set('Cache-Control', 'no-cache')
+  ctx.set('Access-Control-Max-Age', '300')
   ctx.set('Content-Type', 'application/json')
+
+  console.log('Goal response:', JSON.stringify(response, null, 2))
+
   ctx.status = 200
   ctx.body = response
 }
